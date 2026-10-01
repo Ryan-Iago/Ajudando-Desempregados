@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rumo ao Futuro | Guia de Renda para Jovens</title>
+  <link rel="stylesheet" href="style.css?v=1" />
+</head>
+<body>
 
+  <header>
+    <div class="header-container">
+      <h1>🚀 Rumo ao Futuro</h1>
+      <p>Guia prático para jovens do 3º ano conquistarem independência financeira e oportunidades.</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Navegação / Filtros -->
+    <section class="filters-section">
+      <h2>O que você procura hoje?</h2>
+      <div class="filter-buttons">
+        <button class="filter-btn active" onclick="filterCards('all')">Todos</button>
+        <button class="filter-btn" onclick="filterCards('emprego')">💼 Primeiro Emprego</button>
+        <button class="filter-btn" onclick="filterCards('freelance')">💻 Renda Extra / Online</button>
+        <button class="filter-btn" onclick="filterCards('bolsas')">🎓 Bolsas & Auxílios</button>
+      </div>
+    </section>
+
+    <!-- Grade de Oportunidades -->
+    <section class="cards-grid" id="cardsGrid">
+
+      <!-- Card 1 -->
+      <div class="card" data-category="emprego">
+        <span class="badge emprego">Primeiro Emprego</span>
+        <h3>Jovem Aprendiz</h3>
+        <p>Programa governamental para jovens entre 14 e 24 anos. Permite trabalhar com carteira assinada e carga horária reduzida para não atrapalhar os estudos.</p>
+        <ul>
+          <li><strong>Onde buscar:</strong> CIEE, NUBE, ABRH</li>
+          <li><strong>Ganhos médios:</strong> R$ 600 - R$ 1.200</li>
+        </ul>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card" data-category="freelance">
+        <span class="badge freelance">Renda Extra</span>
+        <h3>Freelancer Digital</h3>
+        <p>Preste serviços simples na internet como formatação de trabalhos, edição de vídeos curtos (Reels/TikTok) ou gestão de redes sociais para pequenos comércios locais.</p>
+        <ul>
+          <li><strong>Plataformas:</strong> Workana, 99Freelas, Fiverr</li>
+          <li><strong>Ganhos médios:</strong> Por projeto (R$ 50 - R$ 300)</li>
+        </ul>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card" data-category="bolsas">
+        <span class="badge bolsas">Bolsas</span>
+        <h3>Prouni & FIES</h3>
+        <p>Utilize sua nota do ENEM para conseguir bolsas de estudo integrais (100%) ou parciais (50%) em faculdades privadas de todo o Brasil.</p>
+        <ul>
+          <li><strong>Requisito:</strong> Ter feito o ENEM e renda familiar compatível</li>
+          <li><strong>Benefício:</strong> Faculdade de graça ou financiada</li>
+        </ul>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card" data-category="emprego">
+        <span class="badge emprego">Primeiro Emprego</span>
+        <h3>Estágio de Nível Médio</h3>
+        <p>Estudantes do 3º ano podem estagiar em empresas e órgãos públicos com contratos de até 6 horas diárias.</p>
+        <ul>
+          <li><strong>Onde buscar:</strong> Portais de vagas e redes como LinkedIn</li>
+          <li><strong>Ganhos médios:</strong> R$ 500 - R$ 900 + Vale Transporte</li>
+        </ul>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card" data-category="freelance">
+        <span class="badge freelance">Renda Extra</span>
+        <h3>Vendas e Microempreendedorismo</h3>
+        <p>Produza doces, artesanatos ou desapegue de roupas e itens que não usa mais em brechós online.</p>
+        <ul>
+          <li><strong>Plataformas:</strong> Enjoei, Mercado Livre, Instagram</li>
+          <li><strong>Ganhos médios:</strong> Variável conforme vendas</li>
+        </ul>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card" data-category="bolsas">
+        <span class="badge bolsas">Bolsas</span>
+        <h3>Auxílio Permanência Universitário</h3>
+        <p>Universidades públicas oferecem bolsas de moradia, alimentação e transporte para estudantes de baixa renda não abandonarem os estudos.</p>
+        <ul>
+          <li><strong>Onde buscar:</strong> Pró-Reitoria de Assistência Estudantil da faculdade</li>
+          <li><strong>Ganhos médios:</strong> R$ 400 - R$ 800/mês + Refeitório grátis</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- Calculadora / Simulador de Metas -->
+    <section class="calculator-section">
+      <h2>🧮 Simule sua Meta Financeira</h2>
+      <p>Descubra em quanto tempo você consegue juntar dinheiro para o seu objetivo (faculdade, curso, reserva, etc).</p>
+      
+      <div class="calc-form">
+        <div class="input-field">
+          <label for="goalAmount">Qual seu objetivo em R$? (ex: 1200)</label>
+          <input type="number" id="goalAmount" placeholder="Ex: 1000" />
+        </div>
+
+        <div class="input-field">
+          <label for="monthlySavings">Quanto consegue guardar por mês em R$?</label>
+          <input type="number" id="monthlySavings" placeholder="Ex: 200" />
+        </div>
+
+        <button onclick="calculateSavings()">Calcular Tempo</button>
+      </div>
+
+      <div id="calcResult" class="calc-result"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Rumo ao Futuro • Projeto Guia de Orientação Profissional e Financeira para Jovens</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
